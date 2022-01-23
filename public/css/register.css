@@ -1,0 +1,66 @@
+
+#img1{
+  height:50px;
+  width:50px
+}
+#text1{
+  color: white;
+  /* font-weight: bolder; */
+  font-size: 20px;
+}
+#text2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-family: 'Shizuru', cursive;
+}
+nav{
+  padding: 20px;
+}
+#bg2{
+  padding: 50px;
+}
+#footer{
+  background-color: lightblue;
+  padding: 20px;
+}
+#list1{
+  list-style-type: none;
+}
+.active, li:hover {
+  background-color: yellow;
+  color: white;
+}
+#text3{
+ color: white;
+ font-weight: bolder;
+}
+input{
+  border-radius: 10px;
+  background-color: lightblue;
+  border: none;
+  padding: 10px;
+}
+#text4{
+  color: rgb(85, 79, 79);
+}
+#form6Example1{
+  border-color: darkblue;
+  border-radius: 50px;
+
+}
+#icon{
+  background-color:red;
+  width:300px
+}
+#i{
+ 
+  font-size: 30px;
+}
+#star{
+  color: red;
+  
+}
+#borderBox{
+  box-shadow: 10px 10px 10px 10px grey;
+  padding: 20px;
+}

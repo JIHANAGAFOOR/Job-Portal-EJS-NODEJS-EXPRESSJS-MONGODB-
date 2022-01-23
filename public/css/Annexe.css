@@ -1,0 +1,282 @@
+#img1{
+  height:50px;
+  width:50px
+}
+#text1{
+  color: white;
+  /* font-weight: bolder; */
+  font-size: 20px;
+}
+#text2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-family: 'Shizuru', cursive;
+  font-size: 30px;
+}
+nav{
+  padding: 20px;
+}
+#bg2{
+  background-image: url("/images/Seccond-Career-Header-Background.png");
+  height:600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+#blank1{
+  height: 200px;
+}
+#text3{
+	position: relative;
+  font-family: FreeMono, monospace;
+  /* text-transform: uppercase; */
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  color: #0D607C;
+  background: linear-gradient(#0D607C, #0D607C, #0D607C, #0D607C);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  font-weight: 900;
+  font-size: 70px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff2') format('woff2');
+}
+#bg3{
+  height: 300px;
+  padding: 50px;
+}
+#bg4{
+  height:200px;
+  
+}
+#text4{
+  color: #0D607C;
+  font-family: FreeMono, monospace;
+  font-weight: bolder;
+  font-size: 2em;
+  letter-spacing: 4px;
+
+
+}
+
+#img5{
+  height: 350px;
+  width: 500px;
+}
+
+
+
+
+#card {
+position: relative;
+height: 350px;
+width: 100%;
+border: none;
+}
+
+#overlay{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(29, 106, 154, 0.72);
+color: white;
+font-weight: bold;
+visibility: hidden;
+opacity: 0; cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card:hover #overlay {
+visibility: visible;
+opacity: 1;
+}
+#card1 {
+position: relative;
+height: 350px;
+width: 100%;
+border: none;
+}
+
+#overlay1{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: red;
+color:white;
+font-weight: bold;
+visibility: hidden;
+opacity: 0; cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card1:hover #overlay1{
+visibility: visible;
+opacity: 0.5; cursor: pointer;
+}
+#card2 {
+position: relative;
+height: 350px;
+width: 100%;
+border: none;
+}
+
+#overlay2{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: orange;
+font-weight: bold;
+color:darkblue;
+visibility: hidden;
+opacity: 0; cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card2:hover #overlay2{
+visibility: visible;
+opacity: 0.7;
+}
+
+#overlay3{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: yellow;
+color:black;
+font-weight: bold;
+visibility: hidden;
+opacity: 0;
+ cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card3:hover #overlay3{
+visibility: visible;
+opacity: 0.5;
+}
+#overlay4{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: orange;
+color:black;
+font-weight: bold;
+visibility: hidden;
+opacity: 0; cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card4:hover #overlay4{
+visibility: visible;
+opacity: 0.7;
+}
+
+#overlay5{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: red;
+color:white;
+visibility: hidden;
+opacity: 0; cursor: pointer;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+
+#card5:hover #overlay5{
+visibility: visible;
+opacity: 0.5;
+}
+#yid{
+  color: red;
+  cursor: pointer;
+  font-size: 70px;
+}
+#fid{
+  font-size: 70px;
+  cursor: pointer;
+  color:  #4267B2;
+}
+#wid{
+  font-size: 70px;
+  cursor: pointer;
+  color:  #128C7E;
+}
+#iid{
+  font-size: 70px;
+  cursor: pointer;
+  color:   #E1306C;
+}
+#tid{
+  font-size: 70px;
+  cursor: pointer;
+  color:  #0088cc;
+}
+#twid{
+  font-size: 80px;
+  cursor: pointer;
+  color:  #1DA1F2;
+}
+#footer{
+  background-color: #0D607C;
+  color: white;
+  padding: 20px;
+}
+#text11{
+  font-family:FreeMono, monospace;
+  font-weight: bolder;
+  font-size: 20px;
+}
+#list1{
+  list-style-type: none;
+}
+
+#button1{
+background-color: #0D607C;
+/* padding: 15px; */
+width:100px;
+height: 50px;
+border-radius: 10px;
+color: white;
+font-weight: bolder;
+font-family:FreeMono, monospace;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annexe | User</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+  <link rel="icon" href="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/103952249/original/a44741093bb534d13a622ab0895e1db263f186b6/design-a-logo-with-only-a-letter-that-is-eyecatching.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sacramento&family=Shizuru&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/user.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Shizuru&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+</head>
+<script>
+  $(document).ready(function(){
+    
+    $("#signout").click(function(){
+      $("#emailDown").slideToggle();
+    });
+  });
+  </script>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top "style="background-color:#0D607C;">
+  
+      <a class="navbar-brand" href="#"><img id="img1"src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/103952249/original/a44741093bb534d13a622ab0895e1db263f186b6/design-a-logo-with-only-a-letter-that-is-eyecatching.png" >  <b id="text2">ANNEXE</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <!-- <ul class=" nav navbar-nav mr-auto">
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">Home</p></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">About us</p></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">Contact us</p></a></li> -->
+      <!-- <li class="nav-item"><a href="#" class="nav-link"><p id="text1">Job Seeker</p></a></li> -->
+      <!-- <li class="nav-item"><a href="#" class="nav-link"><p id="text1"><button id="button1">Sign in</button></p></a></li> -->
+    </ul>
+      </div>
+    </nav></div>
+    <br><br><br>
+    <div class="container-fluid" id="bg5">
+      <div class="row">
+        <div class="col-sm-10"></div>
+        <div class="col-sm-2"id="full">
+          <div  id="signout">
+            <span ><%= registerDetails.firstname %>   <span> <%= registerDetails.lastname %></span> <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </div>
+            <div style="display: none;" id="emailDown">
+                <br><span><%= registerDetails.email %></span>
+                <a href="/logout" id="text4"><button id="button2"> Sign Out</button></a>
+              </div>
+           
+        </div>
+      
+      
+      <div class="row"><%for(var i=0;i<data.length;i++){%>
+        
+        <div class="card" id="cardborder">
+          <!-- <h5 class="card-header">Featured</h5> -->
+          <div class="card-body">
+            
+            <h3 class="card-title" id="jobname"><%=data[i].jobname%></h3> 
+            <h5 class="card-title" id="companyname"><%=data[i].companyname%><h5>
+              <p class="card-title"id="location"><%=data[i].location%></p>
+            <span class="card-text" id="desc"><%=data[i].desc%>
+              <!-- <a href="/admin/<%=data[i]._id%>">Read More..</a> -->
+            </span><br>
+            <a href="/user/apply/<%=data[i]._id%>"><button id="button1"><b>Apply</b></button></a>
+          </div>
+          
+         
+        </div>
+        <br><br><br><br><%}%>
+        <script type="text/javascript">
+          function disableButton(btn) {
+              document.getElementById(btn.id).disabled = true;
+              alert("Button has been disabled.");
+          }
+      </script>
+      <!-- </div><br><a href="/admin/addPage"><button class="btn btn-success " id="btns">Add Job</button></a> -->
+    </div>
+    <br><br>
+  
+  <div class="container-fluid" id="footer">
+    <br><br>
+     <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6"><center><p id="text11"><b> Annexe Job Consultancy Copyright &copy; 2021 pvt Ltd</b></p></center></div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</body>
+</html>

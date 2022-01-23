@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="248717930022-5muitfucmhqpbk7c6h4nr8d6g5ls5ksn.apps.googleusercontent.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annexe | Login</title>
+  <link rel="icon" href="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/103952249/original/a44741093bb534d13a622ab0895e1db263f186b6/design-a-logo-with-only-a-letter-that-is-eyecatching.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sacramento&family=Shizuru&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Shizuru&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top " id="nav1">
+  
+      <a class="navbar-brand" href="#"><img id="img1"src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/103952249/original/a44741093bb534d13a622ab0895e1db263f186b6/design-a-logo-with-only-a-letter-that-is-eyecatching.png" >  <b id="text2">ANNEXE</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class=" nav navbar-nav mr-auto">
+     
+      <!-- <li class="nav-item"><a href="#" class="nav-link"><p id="text1"><button id="button1">Sign in</button></p></a></li> -->
+    </ul>
+      </div>
+    </nav></div><br><br><br>
+    <div class="container-fluid" id="bg2">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" id="bg3">
+          <div class="row text-center"><i class="fa fa-user-circle-o" aria-hidden="true" id="usericon"></i></div><br>
+          <form method="post" action="/login">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <!-- <label class="form-label" for="form2Example1">Username</label> -->
+              <input type="text" id="form2Example1" class="form-control"name="username"placeholder="Username" required>
+              
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4" >
+              
+              <input type="password" id="form2Example1" class="form-control"placeholder="Password" name="password" required>
+              
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input style="background-color: #0D607C;"
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="form2Example34"
+                    checked 
+                  />
+                  <label class="form-check-label" for="form2Example34"> Remember me </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="/forgot" style="color: #0D607C;">Forgot password?</a>
+              </div>
+            </div>
+          
+            <!-- Submit button -->
+            <input type="submit" class="btn  btn-block mb-4" value="Sign in" id="button1">
+          
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="/signup"style="color: #0D607C;">Register</a></p>
+              <p>or sign up with:</p>
+              <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+          
+              <center><div class="g-signin2" data-onsuccess="onSignIn"></div></center>
+            <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+            <script>
+              function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                  console.log('User signed out.');
+                });
+              }</script>
+          </form>
+          
+          
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </div>
+    
+    <br><br>
+    
+    <div class="container-fluid" id="footer">
+      <br><br>
+       <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6"><center><p id="text11"><b> Annexe Job Consultancy Copyright &copy; 2021 pvt Ltd</b></p></center></div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  <script>
+    function onSignIn(googleUser) {
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log(id_token)
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/googleLogin');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+      console.log('Signed in as: ' + xhr.responseText);
+      if(xhr.responseText=="success")
+      {
+        signOut();
+                location.assign('/userdetails')
+      }
+     };
+  xhr.send(JSON.stringify({token:id_token}));
+ }
+
+  </script>
+  
+</body>
+</html>
